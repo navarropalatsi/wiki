@@ -15,23 +15,36 @@ export default defineConfig({
             title: "My Docs",
             social: [
                 {
+                    icon: "linkedin",
+                    label: "LinkedIn",
+                    href: "https://www.linkedin.com/in/joannavarropalatsi/",
+                },
+                {
                     icon: "github",
                     label: "GitHub",
-                    href: "https://github.com/withastro/starlight",
+                    href: "https://github.com/navarropalatsi",
                 },
             ],
             sidebar: [
                 {
-                    label: "Guides",
+                    label: "Sistemas Microinformáticos y Redes",
                     items: [
-                        // Each item here is one entry in the navigation menu.
-                        { label: "Example Guide", slug: "guides/example" },
-                    ],
-                },
-                {
-                    label: "Reference",
-                    autogenerate: { directory: "reference" },
-                },
+                        {
+                            label: "Aplicaciones Web",
+                            items: [
+                                {
+                                    label: "Módulo 1",
+                                    items: [
+                                        {
+                                            label: "1. Introducción a los Lenguajes de Etiquetas y HTML",
+                                            slug: "smr/mp-0228/modulo-1/sesion-1",
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
+                    ]
+                }
             ],
         }),
     ],
