@@ -30,6 +30,3 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
-        with:
-          # no inputs needed — deploys the prepared output
-          # (actions/deploy-pages leerá la salida preparada por withastro/action)
