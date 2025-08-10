@@ -5,6 +5,7 @@ on:
     branches:
       - main
 
+# permisos por defecto (heredados por jobs salvo que los sobreescribas)
 permissions:
   contents: read
   pages: write
@@ -44,8 +45,11 @@ jobs:
     name: Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
+    # Opción A: no sobreescribir permisos y heredar los del root (recomendado)
+    # (si quieres sobreescribir, incluye id-token: write también)
     permissions:
       pages: write
+      id-token: write
 
     steps:
       - name: Deploy to GitHub Pages
